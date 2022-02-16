@@ -1,2 +1,3 @@
-# BookmarkShow
-Show your bookmarks with a tree diagram 
+# 书签秀
+
+用树状图来展现书签。
