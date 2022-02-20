@@ -128,7 +128,7 @@ dmypy.json
 # Pyre type checker
 .pyre/
 #
-日志/*
+日志/
 tests/bookmarks_chrome.json
 tests/bookmarks_edge_new.json
 tests/bookmarks_edge.json
