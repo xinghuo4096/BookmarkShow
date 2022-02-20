@@ -1,3 +1,4 @@
+# TODO 准备生成html和图片
 
 import codecs
 from turtle import clear
