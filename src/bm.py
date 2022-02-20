@@ -6,7 +6,7 @@ from urllib.parse import urlparse
 import uuid
 
 
-class basic:
+class Basic:
     def __init__(self, title: str, add_date=None, last_modified=None, guid='') -> None:
         self.title = title
         self.guid = guid
@@ -58,10 +58,10 @@ class basic:
         return json.dumps(self,
                           default=self._ggg,
                           sort_keys=False, ensure_ascii=False,
-                          indent='\t')
+                          indent='    ')
 
 
-class bookmark(basic):
+class Bookmark(Basic):
     def __init__(self,  title, uri, icon='', add_date=None, last_modified=None, guid=''):
         super().__init__(title,  add_date, last_modified, guid)
 
@@ -75,7 +75,7 @@ class bookmark(basic):
             self.name = urlparse(uri).hostname
 
 
-class folder(basic):
+class Folder(Basic):
     def __init__(self,  title: str, children: list = None, add_date=None, last_modified=None, guid=''):
         super().__init__(title, add_date, last_modified, guid)
 

@@ -127,3 +127,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+src/bookmarks_chrome.json
+src/bookmarks_firefox.json
+src/bookmarks_edge.json
+src/bookmarks_edge_new.json
