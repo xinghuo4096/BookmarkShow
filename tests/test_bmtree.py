@@ -1,6 +1,6 @@
 import codecs
 import os
-from bmtree import bookmark2json
+from bmtree import bookmark2json, simple_show, bms
 
 
 def test_html2json():
@@ -25,8 +25,13 @@ def test_html2json():
         assert os.path.isfile(bmfile[0])
 
 
+def test_simple_show():
+    outfile = simple_show()
+    assert os.path.isfile(outfile)
+
+
 def main():
-    test_html2json()
+    test_simple_show()
 
 
 if __name__ == '__main__':

@@ -32,7 +32,6 @@ class Basic:
             self.guid = getguid(self.title)
 
     def isempty(self, x):
-
         assert isinstance(x, tuple)
         data = x[1]
 
@@ -58,7 +57,7 @@ class Basic:
         return json.dumps(self,
                           default=self._ggg,
                           sort_keys=False, ensure_ascii=False,
-                          indent='    ')
+                          indent='')
 
 
 class Bookmark(Basic):
@@ -88,6 +87,12 @@ class Folder(Basic):
             self.name = self.title
         else:
             self.name = 'o'
+
+
+class Bookmarks:
+    def __init__(self) -> None:
+        self.folder_count = 0
+        self.bookmark_count = 0
 
 
 def getguid(name):
