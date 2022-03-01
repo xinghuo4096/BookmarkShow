@@ -4,10 +4,11 @@ from bmtree import bookmark2json, simple_show, bms
 
 
 def test_html2json():
-    flist = (('tests/bookmarks_edge.html', 'tests/bookmarks_edge.json'),
-             ('tests/bookmarks_edge_new.html', 'tests/bookmarks_edge_new.json'),
-             ('tests/bookmarks_firefox.html', 'tests/bookmarks_firefox.json'),
-             ('tests/bookmarks_chrome.html', 'tests/bookmarks_chrome.json'))
+    flist = (
+        ('tests/bookmarks_edge.html', 'tests/bookmarks_edge.json'),
+        ('tests/bookmarks_edge_new.html', 'tests/bookmarks_edge_new.json'),
+        ('tests/bookmarks_firefox.html', 'tests/bookmarks_firefox.json'),
+        ('tests/bookmarks_chrome.html', 'tests/bookmarks_chrome.json'))
     for bmfile in flist:
         f1 = codecs.open(bmfile[0], 'r', 'utf-8')
         str1 = f1.read()

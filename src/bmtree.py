@@ -121,7 +121,10 @@ def echar_show(infile='tests/bookmarks_edge_new.html', outfile='outdata/show_boo
         function (params) {   
             showstr='';                             
             if (typeof(params.data.title) != 'undefined')
-               {	showstr+='Title:'+params.data.title}            
+               {if (params.data.title=='dl')
+				 {showstr+='Title:'+params.data.name}
+				 else{  showstr+='Title:'+params.data.title}
+                 }            
             if (typeof(params.data.uri) != 'undefined')            
                {	showstr+='\\n<br/>uri:'+params.data.uri}                 
             return showstr

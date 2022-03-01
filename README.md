@@ -4,16 +4,30 @@
 
 ## 功能
 
-通过浏览器导出的html书签文件，生成html文件或图片文件，来展示书签内容。
+通过处理浏览器导出的html书签文件，生成html文件或图片文件，来展示书签内容。
+用浏览器查看，会显示树状图，如果书签里面有文件夹，可以展开或收起文件夹。
 
-- 目前支持浏览器：IE，edge，Firefox，chrome
+- 目前支持IE，edge，Firefox，chrome的书签导出为html格式的文件
 
 ## 效果
 
-### 生成一个html文件
+- 展现效果
+![效果1](show1.jpg)
+- 展开
+![效果2](show2.jpg)
+- 个人的近1500书签效果
+![效果3](show3.jpg)
 
-用浏览器查看，会显示树状图，如果书签里面有文件夹，可以展开或收起文件夹
+## 具体用法
 
-### 生成一个图片
+`src`目录下的`show_bookmark_tree.py`可供参考使用。
 
-图片内容是树状图
+`bmtree.py`里的`simple_show()`和`echar_show()`
+
+```python
+outfile = simple_show()
+outfile = simple_show(infile='tests/bookmarks_firefox.html',
+                      outfile='outdata/show_bookmarks_firefox.html')
+outfile = echar_show(infile='tests/bookmarks_edge.html',
+                     outfile='outdata/show_bookmarks_edge.html', is_cdn_jsdelivr=True)
+```
