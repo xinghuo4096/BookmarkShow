@@ -1,5 +1,3 @@
-# TODO 准备生成html和图片
-
 import codecs
 import json
 import os
@@ -87,10 +85,6 @@ def load_chardata(infile='tests/bookmarks_edge_new.html') -> list:
 
     strret = bookmark2json(str1)[0]
     strjson = json.loads(strret)
-    # TODO test will del
-    savejson = json.dumps(strjson)
-    save('test.json', savejson)
-    save('test2.json', strret)
     listjson = [strjson]
     return listjson
 
